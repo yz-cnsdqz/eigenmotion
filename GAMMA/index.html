@@ -58,10 +58,10 @@
       </nav>
       <header class="bg-light text-black">
          <div class="container text-center">
-            <h1>GAMMA </h1>
-            <h2>The Wanderings of Odysseus in 3D Scenes </h2>
-            <!-- <br> -->
-            <p class="lead">
+            <!-- <h1>GAMMA </h1> -->
+            <h1 style="font-size:300%;">The Wanderings of Odysseus in 3D Scenes </h1>
+            <hr>
+            <p class="lead" style="font-size:120%;">
                <i> We propose <b>GAMMA</b>,
                   an automatic and scalable solution, to populate the 3D scene with diverse digital humans. The digital humans have 
                   1) varied body shapes, 
@@ -69,11 +69,12 @@
                   3) plausible body-ground contact.
                </i>
             </p>
-
+            <h4>CVPR 2022</h4>
             <div class="downloads">
                <br><h3>
-               <a class="publink" href="https://drive.google.com/file/d/1FgKHlwehR8RGZuaW5syWn7DP8E5UQz1b/view?usp=sharing" target="_blank" style="text-decoration: none"> Paper <i class="fa fa-print"></i></a> &nbsp;
-               <a class="publink" href="" target="_blank" style="text-decoration: none"> Code (coming soon) <i class="fa fa-github"></i></a> &nbsp;
+               <a class="publink" href="https://arxiv.org/abs/2112.09251" target="_blank" style="text-decoration: none"> Paper <i class="fa fa-print"></i></a> &nbsp;
+               <a class="publink" href="https://github.com/yz-cnsdqz/GAMMA-release" target="_blank" style="text-decoration: none"> Code <i class="fa fa-github"></i></a> &nbsp;
+               <a class="publink" href="https://drive.google.com/file/d/17AseupQmjVGdzDo2H5MpiDd-nU-zSlPY/view?usp=sharing" target="_blank" style="text-decoration: none"> Poster <i class="fa fa-github"></i></a> &nbsp;
                <h3>
            </div>
          </div>
@@ -163,7 +164,15 @@
                   The body mesh is either male or female. The first 10 body shape parameters are randomly sampled from N(0,I), and the body pose
                   is randomly sampled from <a href="https://github.com/nghorbani/human_body_prior">VPoser</a>.
                   Afterwards, we can obtain the results shown in the videos below.
-                  <hr>
+                  <video width="100%" height="auto"  controls > 
+                     <source type="video/mp4" src="images/results_in_cubes_individual.mp4" /> 
+                 </video>
+               
+                 <br> <br>
+                  <video width="100%" height="auto" controls> 
+                     <source type="video/mp4" src="images/results_in_cubes_all.mp4" /> 
+                 </video>
+                  
                </div>
                
             </div>
@@ -177,41 +186,23 @@
             <div class="row">
                <div class="col-lg-10 mx-auto">
                   <h2 class="section-title-tc">Video</h2>
-                  <br> <br>
-                  <video width="100%" height="auto"  controls > 
-                     <source type="video/mp4" src="images/results_in_cubes_individual.mp4" /> 
-                 </video>
-               
-                 <br> <br>
-                  <video width="100%" height="auto" controls> 
-                     <source type="video/mp4" src="images/results_in_cubes_all.mp4" /> 
-                 </video>
                   <!-- <p class="lead text-justify"><a class="publink" >Coming soon ...</a></p> -->
                   <!-- 16:9 aspect ratio -->
-                  <br> <br>
                   A demonstration video with narration.
                   If it does not play in Safari, please follow <a href='https://discussions.apple.com/thread/252015568'> this link </a> to change the privacy setting.
-                  <iframe src="https://drive.google.com/file/d/1JswHHC-612IR0SDUsz4c35t0v6c96Z43/view?usp=sharing" width="640" height="480" allow="autoplay"></iframe>
-
+                  <iframe width="950" height="534" src="https://www.youtube.com/embed/HpcQBEwF4wk" title="[CVPR22] The Wanderings of Odysseus in 3D Scenes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <hr>
+                  <br> <br>
+                  The influence of the initial body pose on motion. Given the same body shape, the influence of the initial pose is obvious.
+                  <iframe width="950" height="534" src="https://www.youtube.com/embed/dNCppYIuSmg?list=PL-wUqPkU5g41kFw9_A_s-Hy7q6o_bcmZB" title="[GAMMA, CVPR'22] How does the initial pose influence the motion?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <br> <br>
+                  The influence of the body shape on motion. Given the same initial body pose, the influence of the body shape is not consistent.
+                  <iframe width="950" height="534" src="https://www.youtube.com/embed/hN1KoNRo2ho?list=PL-wUqPkU5g41kFw9_A_s-Hy7q6o_bcmZB" title="[GAMMA, CVPR'22] How does the body shape influence the motion?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                </div>
             </div>
          </div>
       </section>
-
-      <!-- <section id="downloads" class="">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-10 mx-auto">
-                   <h2>Downloads</h2> <br>
-                  <h2 class="img-wide text-center">
-                      <a class="publink" href="https://arxiv.org/abs/2112.09251" target="_blank" style="text-decoration: none"> Paper <i class="fa fa-print"></i></a> &nbsp;&nbsp;
-                      <a class="publink" href="" target="_blank" style="text-decoration: none"> Code (coming soon) <i class="fa fa-github"></i></a> &nbsp;&nbsp;
-                  </h2>
-               </div>
-            </div>
-         </div>
-      </section> -->
-
+      
 
 
       <section id="pubs" class="">
@@ -226,12 +217,13 @@
                     CVPR, 2022
                   <br><br>
 <pre style="display: block; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px">
-@misc{zhang2021wanderings,
-    title={The Wanderings of Odysseus in 3D Scenes},
-    author={Zhang, Yan and Tang, Siyu},
-    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-    year={2022},
-}</pre>
+@inproceedings{zhang2022wanderings,
+   title={The Wanderings of Odysseus in 3D Scenes},
+   author={Zhang, Yan and Tang, Siyu},
+   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+   pages={20481--20491},
+   year={2022}
+   }</pre>
                </div>
             </div>
          </div>
