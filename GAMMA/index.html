@@ -94,20 +94,28 @@
                   }
               </style>
                <div class="col-lg-10 mx-auto">
-                  <h3 style="color:red; font-weight: bold;">Our method has been deployed to serve different applications.</h3>
+                  <h3 style="color:red; font-weight: bold;">GAMMA has served different applications.</h3>
                   <br>
-                  <h4>1. Inhabitating the Virtual City</h4>
-                  <img width="200" id="faa" src="images/FAA_Galleries_Motion2_WM.jpg">
-                  
-                  <p>
-                     Collaborating with <a href="https://gramaziokohler.arch.ethz.ch">Gramazio Kohler Research</a>, our method is implemented in Nvidia Omniverse, and 
+                  <h4 style="font-weight: bold;">1. Inhabitating the Virtual City</h4>
+                  <iframe width="400" height="225" id=faa src="https://www.youtube.com/embed/9W_6LA4-4K4" title="Avatars populate a utopian city" 
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p style="line-height:1.4;font-size: large;">
+                     Collaborating with <a href="https://gramaziokohler.arch.ethz.ch">Gramazio Kohler Research</a>, GAMMA is implemented in Nvidia Omniverse, and 
                      let 200 virtual humans inhabit a 600-meter-high digital verticle city. As shown on the left, the entire system is running on the fly for about 8 hours per day. 
-                     Virtual humans of various identities are continuously placed at random places, and move randomly in the scene. 
-                     Curated by Norman Foster Foundation and others, this is currently exhibited at the Guggenheim Museum, Bilbao, Spain. As a state-of-the-art interdisciplinary research, our system has been 
-                     in the <a href="https://ethz.ch/en/news-and-events/eth-news/news/2022/06/avatars-populate-a-utopian-city.html">frontpage news of ETH Zurich</a>.
-                     
+                     Virtual humans of various identities are continuously placed at random places, and move spontaneously in the scene. 
+                     Curated by Norman Foster Foundation and others, this is currently exhibited at the Guggenheim Museum, Bilbao. Our research is also 
+                     in the <a href="https://ethz.ch/en/news-and-events/eth-news/news/2022/06/avatars-populate-a-utopian-city.html">frontpage news of ETH Zurich</a>. 
                   </p>
-                     
+                  <br><br>
+                  <h4 style="font-weight: bold;">2. Mixing Virtual Humans and Real Scenes with Microsoft Hololens</h4>
+                  <iframe width="400" height="225"  id=faa src="https://www.youtube.com/embed/9tjd-N-i5q4" title="populating the ETH main building with Microsoft Hololens" 
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p style="line-height:1.4;font-size: large;">
+                     We implement our method into Microsoft Hololens, and developed an App to populate a real environment. The left is an example in our ETH main building.
+                     The App includes a frontend in the edge device to scan the environment and render the human bodies, and a backend to generate human motions on the cloud. 
+                     By placing waypoints on the floors, we can guide differnet human bodies to move spontaneously. As shown below,
+                     virtual humans are wandering multiple floors at the ETH main building lobby.
+                  </p>
                   
                   
                </div>
@@ -234,8 +242,9 @@
             <div class="row">
                <div class="col-lg-10 mx-auto">
                   <h2 class="section-title-tc">Acknowledgement</h2>
-                  We appreciate <a href="https://gramaziokohler.arch.ethz.ch">Gramazio Kohler Research</a> to provide architecture CAD models for experiments.
-                  Visualizations of body motions are largely based on <a href="https://smpl-x.is.tue.mpg.de">the SMPL-X blender add-on</a>.
+                  We thank <a href="https://gramaziokohler.arch.ethz.ch">Gramazio Kohler Research</a> to provide architecture CAD models for experiments.
+                  Visualizations of body motions are largely based on <a href="https://smpl-x.is.tue.mpg.de">the SMPL-X blender add-on</a>. Thank Jonathan Lehner
+                  for his efforts to deploy GAMMA in Nvidia Omniverse. Thank Lukas Bösiger for this efforts to deploy GAMMA in Hololens.
             </div>
          </div>
       </section>
