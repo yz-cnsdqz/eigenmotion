@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="PRIMAL is a generative motion model that works in realtime.">
+      <meta name="author" content="Yan Zhang">
+      <title>PRIMAL: Physically Reactive and Interactive Motor Model for Avatar Learning</title>
+      <meta property="og:title" content="PRIMAL" />
+      <meta property="og:description" content="PRIMAL is a generative motion model that works in realtime.">
+      <meta property="og:image" content="https://yz-cnsdqz.github.io/eigenmotion/PRIMAL/images/PRIMAL-teaser.jpg" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="PRIMAL" />
+      <meta name="twitter:description" content="PRIMAL is a generative motion model that works in realtime." />
+      <meta name="twitter:image" content="https://yz-cnsdqz.github.io/eigenmotion/PRIMAL/images/PRIMAL-teaser.jpg" />
+      <meta name="twitter:image:alt" content="PRIMAL 2025" />
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/scrolling-nav.css" rel="stylesheet">
+      <!-- nice figures  -->
+      <link rel="stylesheet" href="css/font-awesome.css">
+      <link rel="icon" type="image/png" href="images/favicon.png">
+   </head>
+   <body id="page-top">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+         <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">PRIMAL</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link js-scroll-trigger" href="#video">Video</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link js-scroll-trigger" href="#poster">Poster</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link js-scroll-trigger" href="#pubs">Citation</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <header class="bg-light text-black">
+         <div class="container text-center">
+            <h1>PRIMAL </h1>
+            <h2>Physically Reactive and Interactive Motor Model for Avatar Learning</h2>
+            <h4>arxiv, 2025</h4>
+            <hr>
+         </div>
+
+         <div class="container text-center">
+            <p class="lead">
+               <a href="https://yz-cnsdqz.github.io" target="_blank">Yan Zhang</a><sup>1</sup>, 
+               <a href="https://yfeng95.github.io" target="_blank">Yao Feng</a><sup>1,3</sup>, 
+               <a href="https://is.mpg.de/person/acseke" target="_blank">Alpár Cseke</a><sup>1</sup>, 
+               <a href="https://is.mpg.de/person/nsaini" target="_blank">Nitin Saini</a><sup>1</sup>, 
+               <a href="https://www.linkedin.com/in/bajandas/?originalSubdomain=de" target="_blank">Nathan Bajandas</a><sup>1</sup>, 
+               <a href="https://www.linkedin.com/in/nicolasheron/" target="_blank">Nicolas Heron</a><sup>1</sup>, 
+               <a href="https://ps.is.mpg.de/person/black" target="_blank"> Michael J. Black</a><sup>1,2</sup>
+            </p>
+               <sup>1</sup> Meshcapade,
+               <sup>2</sup> Max Planck Institute for Intelligent Systems, Tübingen, Germany,
+               <sup>3</sup> Stanford University<br>
+            
+            <div class="downloads">
+               <br><h3>
+               <a class="publink" href="" target="_blank" style="text-decoration: none"> Paper <i class="fa fa-print"></i></a> &nbsp;
+               <a class="publink" href="" target="_blank" style="text-decoration: none"> Code (comming soon) <i class="fa fa-github"></i></a> &nbsp;
+               <h3>
+           </div>
+         </div>
+         
+      </header>
+
+      <section id="about" class="about-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-10 mx-auto">
+                  <div class="img-wide text-center">
+                     <p><img class="img-fluid" alt="teaser" src="images/PRIMAL-teaser.png"></p>
+                  </div>
+                  <hr>
+                  <p class="lead text-justify">
+                     To build a motor system of the interactive avatar, it is essential to develop a generative motion model, which at least can drive the body to move in 3D space in a perpetual, realistic, controllable, and responsive manner. Although motion generation has been extensively studied in the past, most methods can be hardly regarded as embodied intelligence, due to their offline setting, slow speed, limited motion lengths, unnaturalness, and more. To overcome these limitations, we propose PRIMAL, an autoregressive diffusion model that is learned with a two-stage paradigm, inspired by recent advances of foundation models. In the pretraining stage, we let the model concentrate on learning motion dynamics from a large number of sub-second motion segments. In the adaptation phase, we propose a generic ControlNet-like adaptor, and fine-tune it on semantic action generation and spatial target reaching. Experiments show that physics effects emerge in our results. Given a single-frame initial state, our model not only generates unbounded, realistic, and controllable motion, but also enables the avatar to be responsive to induced impulses in real time. In addition, we can effectively and efficiently adapt our base model to few-shot personalized actions and the task of spatial control. Evaluations show that our proposed methods outperform state-of-the-art baselines. Based on these advantages, we build a real-time character animation system in Unreal Engine, making them ``alive''.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="video">
+         <div class="container">
+           <div class="row">
+             <div class="col-lg-12 text-center">
+               <h2 class="section-title-tc">Demo Videos</h2>
+             </div>
+           </div>
+         </div>
+       </section>
+       
+<!-- 
+      <section id="pubs" class="">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-10 mx-auto">
+                  <h2 class="section-title-tc">Citation</h2>
+                  <br>
+                  Yan Zhang, Sergey Prokudin, Marko Mihajlovic, Qianli Ma, Siyu Tang<br>
+                  <a class="publink" target="_blank" href="https://arxiv.org/abs/2406.03625"><b>
+                     Degrees of Freedom Matter: Inferring Dynamics from Point Trajectories</b><br></a>
+                    In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2025
+                  <br><br>
+<pre style="display: block; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px">
+   @inproceedings{PRIMAL,
+      title   = {Degrees of Freedom Matter: Inferring Dynamics from Point Trajectories},
+      author  = {Yan Zhang and Sergey Prokudin and Marko Mihajlovic and Qianli Ma and Siyu Tang},
+      booktitle = {Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
+      year    = {2025}
+  }</pre>
+               </div>
+            </div>
+         </div>
+      </section> -->
+
+      
+      <!-- Footer -->
+      <footer class="py-5 bg-dark">
+         <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; PRIMAL 2025</p>
+         </div>
+         <!-- /.container -->
+      </footer>
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Plugin JavaScript -->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+      <!-- Custom JavaScript for this theme -->
+      <script src="js/scrolling-nav.js"></script>
+   </body>
+</html>
