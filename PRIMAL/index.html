@@ -56,7 +56,7 @@
          <div class="container text-center">
             <h1>PRIMAL </h1>
             <h2>Physically Reactive and Interactive Motor Model for Avatar Learning</h2>
-            <h4>arxiv, 2025</h4>
+            <h4>March, 2025</h4>
             <hr>
          </div>
 
@@ -89,11 +89,11 @@
             <div class="row">
                <div class="col-lg-10 mx-auto">
                   <div class="img-wide text-center">
-                     <!-- <p><img class="img-fluid" alt="teaser" src="images/PRIMAL-teaser.png"></p> -->
+                     <p><img class="img-fluid" alt="teaser" src="images/PRIMAL-teaser.png"></p>
                   </div>
                   <hr>
                   <p class="lead text-justify">
-                     <!-- To build a motor system of the interactive avatar, it is essential to develop a generative motion model, which at least can drive the body to move in 3D space in a perpetual, realistic, controllable, and responsive manner. Although motion generation has been extensively studied in the past, most methods can be hardly regarded as embodied intelligence, due to their offline setting, slow speed, limited motion lengths, unnaturalness, and more. To overcome these limitations, we propose PRIMAL, an autoregressive diffusion model that is learned with a two-stage paradigm, inspired by recent advances of foundation models. In the pretraining stage, we let the model concentrate on learning motion dynamics from a large number of sub-second motion segments. In the adaptation phase, we propose a generic ControlNet-like adaptor, and fine-tune it on semantic action generation and spatial target reaching. Experiments show that physics effects emerge in our results. Given a single-frame initial state, our model not only generates unbounded, realistic, and controllable motion, but also enables the avatar to be responsive to induced impulses in real time. In addition, we can effectively and efficiently adapt our base model to few-shot personalized actions and the task of spatial control. Evaluations show that our proposed methods outperform state-of-the-art baselines. Based on these advantages, we build a real-time character animation system in Unreal Engine, making them ``alive''. -->
+                     To build a motor system of the interactive avatar, it is essential to develop a generative motion model drives the body to move through 3D space in a perpetual, realistic, controllable, and responsive manner. Although motion generation has been extensively studied, most methods do not support "<b>embodied intelligence</b>" due to their offline setting, slow speed, limited motion lengths, or unnatural movements. To overcome these limitations, we propose PRIMAL, an autoregressive diffusion model that is learned with a two-stage paradigm, inspired by recent advances in foundation models. In the pretraining stage, the model learns motion dynamics from a large number of sub-second motion segments, providing "<b>motor primitives</b>" from which more complex motions are built. In the adaptation phase, we employ a ControlNet-like adaptor to fine-tune the motor control for semantic action generation and spatial target reaching. Experiments show that physics effects emerge from our training. Given a single-frame initial state, our model not only generates unbounded, realistic, and controllable motion, but also enables the avatar to be responsive to induced impulses in real time. In addition, we can effectively and efficiently adapt our base model to few-shot personalized actions and the task of spatial control. Evaluations show that our proposed method outperforms state-of-the-art baselines. We leverage the model to create a real-time character animation system in Unreal Engine that is highly responsive and natural.
                   </p>
                </div>
             </div>
@@ -105,6 +105,7 @@
            <div class="row">
              <div class="col-lg-12 text-center">
                <h2 class="section-title-tc">Demo Videos</h2>
+               <iframe width="840" height="473" src="https://www.youtube.com/embed/-GcponE1IQg?si=n_e4c4SVeFz7Jk7V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
              </div>
            </div>
          </div>
