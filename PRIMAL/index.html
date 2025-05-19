@@ -112,6 +112,90 @@
        </section>
 
 
+
+
+
+
+      <section id="local-videos">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-10 mx-auto">
+                  <h2 class="section-title-tc">More insights on the 0.5-second motion segment.</h2>
+                  <p>
+                      <b>The key novelty is the formulation that generates 0.5-second motion given a single initial state.</b> This contrasts with prior work that generates a long future motion conditioned on a past motion. Its benefits include reducing overfitting, making model training easier, and making the avatar reactive to impulses and classifier-based guidance.
+                  </p>
+                  <p>
+                     To better understand the benefits of our formulation, we compare two identical settings except the motion length, where <code>ours</code> generates 15 frames given 1 frame, and <code>baseline</code> generates 40 frames given 20 frames. We replace in-context with cross-attention to handle multi-frame conditioning. Both models are successfully overfit to a ballet sequence with 229 frames, and the ballet motion can be reproduced given the first frame(s). 
+                  </p>
+                  
+                  <div class="row mb-4">
+                     <div class="col-md-4 mb-4">
+                        <video controls width="100%" poster="images/video3-thumb.png">
+                           <source src="videos/balle1_the_training_seq.mp4.mp4" type="video/mp4">
+                        </video>
+                        <p class="text-center mt-2" style="font-size: 0.9em;">Ballet motion for training.</p>
+                     </div>
+                     <div class="col-md-4 mb-4">
+                        <video controls width="100%" poster="images/video4-thumb.png">
+                           <source src="videos/ours_from_first.mp4.mp4" type="video/mp4">
+                        </video>
+                        <p class="text-center mt-2" style="font-size: 0.9em;"><code>ours</code> given the first frame.</p>
+                     </div>
+                     <div class="col-md-4 mb-4">
+                        <video controls width="100%" poster="images/video5-thumb.png">
+                           <source src="videos/balle1_the_training_seq.mp4.mp4" type="video/mp4">
+                        </video>
+                        <p class="text-center mt-2" style="font-size: 0.9em;"><code>baseline</code> given the first 20 frames.</p>
+                     </div>
+                  </div>
+                  
+                  <p>
+                     First, we generate 780 future frames given the end frame(s) of that ballet sequence, and use ASR to measure the foot-skating ratio. We find <code>ours</code> produces ballet stably, whereas <code>baseline</code> gradually fails as time progresses. 
+                  </p>
+                  <div class="row">
+                     <div class="col-md-6 mb-4">
+                        <video controls width="100%" poster="images/video1-thumb.png">
+                           <source src="videos/exp1-ours.mp4.mp4" type="video/mp4">
+                        </video>
+                        <p class="text-center mt-2" style="font-size: 0.9em;"><code>ours</code>, ASR=0.08. </p>
+                     </div>
+                     <div class="col-md-6 mb-4">
+                        <video controls width="100%" poster="images/video2-thumb.png">
+                           <source src="videos/exp1-baseline.mp4.mp4" type="video/mp4">
+                        </video>
+                        <p class="text-center mt-2" style="font-size: 0.9em;"><code>baseline</code>, ASR=0.12.</p>
+                     </div>
+                  </div>
+
+                  <p>
+                     Second, we generate 156 frames, with conditions from another walking sequence. We find <code>ours</code> produces fast and natural transitions to ballet, whereas <code>baseline</code> produces severe artifacts. 
+                  </p>
+                  <div class="row">
+                     <div class="col-md-6 mb-4">
+                        <video controls width="100%" poster="images/video1-thumb.png">
+                           <source src="videos/exp2-ours.mp4.mp4" type="video/mp4">
+                        </video>
+                        <p class="text-center mt-2" style="font-size: 0.9em;"><code>ours</code>, ASR=0.06. </p>
+                     </div>
+                     <div class="col-md-6 mb-4">
+                        <video controls width="100%" poster="images/video2-thumb.png">
+                           <source src="videos/exp2-baseline.mp4.mp4" type="video/mp4">
+                        </video>
+                        <p class="text-center mt-2" style="font-size: 0.9em;"><code>baseline</code>, ASR=0.3.</p>
+                     </div>
+                  </div>
+                  <p>
+                     <b>These results indicate our setting makes the model more generalizable w.r.t. motion length and semantics.</b>
+                  </p>
+               
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+
+
       <section id="related">
          <div class="container">
            <div class="row">
