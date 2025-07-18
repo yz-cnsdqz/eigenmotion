@@ -18,11 +18,12 @@
       <!-- Bootstrap core CSS -->
       <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
       <!-- Custom styles for this template -->
-      <link href="css/scrolling-nav.css" rel="stylesheet">
-      <!-- nice figures  -->
-      <link rel="stylesheet" href="css/font-awesome.css">
-      <link rel="icon" type="image/png" href="images/favicon.png">
-   </head>
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+  </head>
    <body id="page-top">
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -110,6 +111,46 @@
            </div>
          </div>
        </section>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="section-title-tc">Interactive Demos</h2>
+              <p class="text-justify">
+                PRIMAL supports few-shot action personalization. Provided a few seconds of videos, we can fine-tune the base model with the mocapaded results. The motion realism and responsiveness are kepted, and the avatar motion style is personalized. In this demo, we retarget the generated motion to Unitree G1 character in Unreal.
+              </p>
+              <div class="row text-center d-flex align-items-center">
+                <div class="col-md-5">
+                  <div class="row no-gutters">
+                    <div class="col-md-6">
+                      <video autoplay loop muted playsinline width="100%">
+                        <source src="videos/walk.mp4" type="video/mp4">
+                      </video>
+                      <p>Walk</p>
+                    </div>
+                    <div class="col-md-6">
+                      <video autoplay loop muted playsinline width="100%">
+                        <source src="videos/run.mp4" type="video/mp4">
+                      </video>
+                      <p>Run</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 text-center">
+                  <p style="font-size: 3rem; font-weight: bold; margin: 0;">&rarr;</p>
+                </div>
+                <div class="col-md-6">
+                  <video autoplay loop muted playsinline width="100%">
+                    <source src="videos/limped_poke.mp4" type="video/mp4">
+                  </video>
+                  <p>Poke while limping</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
@@ -235,7 +276,7 @@
    @article{zhang2025primal,
       title={PRIMAL: Physically Reactive and Interactive Motor Model for Avatar Learning},
       author={Zhang, Yan and Feng, Yao and Cseke, Alp{\'a}r and Saini, Nitin and Bajandas, Nathan and Heron, Nicolas and Black, Michael J},
-      journal={arXiv preprint arXiv:2503.17544},
+      journal={ICCV},
       year={2025}
   }</pre>
                </div>
