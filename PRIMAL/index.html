@@ -107,78 +107,56 @@
             <div class="col-lg-10 mx-auto">
                <h2 class="section-title-tc">Demo Videos</h2>
                <iframe width="840" height="473" src="https://www.youtube.com/embed/-GcponE1IQg?si=n_e4c4SVeFz7Jk7V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-             </div>
-           </div>
-         </div>
-       </section>
+               
+               <hr>
 
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10 mx-auto">
-              <h2 class="section-title-tc">Few-shot fine tuning and animation</h2>
-              <p class="text-justify">
+               <h3 class="section-title-tc">Few-shot fine tuning and animation</h3>
+               <p class="text-justify">
                 PRIMAL supports few-shot action personalization. Provided a few seconds of videos, we can fine-tune the base model with the mocapaded results. The motion realism and responsiveness are kepted, and the avatar motion style is personalized. In this demo, we retarget the generated motion to Unitree G1 character in Unreal.
-              </p>
-              <div class="row text-center d-flex align-items-center">
-                <div class="col-md-5">
-                  <div class="row no-gutters">
-                    <div class="col-md-6">
-                      <video autoplay loop muted playsinline width="100%">
-                        <source src="videos/walk.mp4" type="video/mp4">
-                      </video>
-                      <p>Walk</p>
-                    </div>
-                    <div class="col-md-6">
-                      <video autoplay loop muted playsinline width="100%">
-                        <source src="videos/run.mp4" type="video/mp4">
-                      </video>
-                      <p>Run</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-1 text-center">
-                  <p style="font-size: 3rem; font-weight: bold; margin: 0;">&rarr;</p>
-                </div>
-                <div class="col-md-6">
-                  <video autoplay loop muted playsinline width="100%">
-                    <source src="videos/limped_poke.mp4" type="video/mp4">
-                  </video>
-                  <p>Poke while limping</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+               </p>
+               <div class="row text-center d-flex align-items-center">
+                 <div class="col-md-5">
+                   <div class="row no-gutters">
+                     <div class="col-md-6">
+                       <video autoplay loop muted playsinline width="100%">
+                         <source src="videos/walk.mp4" type="video/mp4">
+                       </video>
+                       <p>Walk</p>
+                     </div>
+                     <div class="col-md-6">
+                       <video autoplay loop muted playsinline width="100%">
+                         <source src="videos/run.mp4" type="video/mp4">
+                       </video>
+                       <p>Run</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col-md-1 text-center">
+                   <p style="font-size: 3rem; font-weight: bold; margin: 0;">&rarr;</p>
+                 </div>
+                 <div class="col-md-6">
+                   <video autoplay loop muted playsinline width="100%">
+                     <source src="videos/limped_poke.mp4" type="video/mp4">
+                   </video>
+                   <p>Poke while limping</p>
+                 </div>
+               </div>
 
+               <hr>
 
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10 mx-auto">
-              <h2 class="section-title-tc"> Text-to-motion generation in real time </h2>
-              <p class="text-justify">
-                    PRIMAL also supports real-time text-to-motion generation. By finetuning the base model with <a href="https://babel.is.tue.mpg.de" target="_blank">BABEL</a>, we can control the avatar's actions given text prompts in the terminal. The following demo is running on Macbook Pro, and the frontend is based on Rust. Model's performance is better on more powerful machines.
-              </p>
-              <div class="row text-center">
-                <div class="col-md-12 text-center">
-                  <video autoplay loop muted playsinline width="100%">//////
-                    <source src="videos/t2m.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="local-videos">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-10 mx-auto">
-                  <h2 class="section-title-tc">Advantages of the 0.5-second atomic action</h2>
+               <h3 class="section-title-tc"> Text-to-motion generation in real time </h3>
+               <p class="text-justify">
+                    PRIMAL also supports real-time text-to-motion generation. By finetuning the base model with <a href="https://babel.is.tue.mpg.de" target="_blank">BABEL</a>, we can control the avatar's actions given text prompts in the terminal. The following demo is running on Macbook Pro, and the frontend is based on Rust. All computations are based on a single Apple M3 Pro chip, and model's performance is better on a more powerful machine.
+               </p>
+               <div class="row text-center">
+                 <div class="col-md-12 text-center">
+                   <video autoplay loop muted playsinline width="100%">//////
+                     <source src="videos/t2m.mp4" type="video/mp4">
+                   </video>
+                 </div>
+               </div>
+               <hr>
+               <h3 class="section-title-tc">Advantages of the 0.5-second atomic action</h3>
                   <p>
                       <b>The key novelty is the formulation that generates 0.5-second motion given a single initial state.</b> This contrasts with prior work that generates a long future motion conditioned on a past motion. Its benefits include reducing overfitting, making model training easier, and making the avatar reactive to impulses and classifier-based guidance.
                   </p>
@@ -223,7 +201,6 @@
                         <p class="text-center mt-2" style="font-size: 0.9em;"><code>baseline</code>, ASR=0.12.</p>
                      </div>
                   </div>
-
                   <p>
                      Second, we generate 156 frames, with conditions from another walking sequence. We find <code>ours</code> produces fast and natural transitions to ballet, whereas <code>baseline</code> produces severe artifacts. 
                   </p>
@@ -244,9 +221,8 @@
                   <p>
                      <b>These results indicate our setting makes the model more generalizable w.r.t. motion length and semantics.</b>
                   </p>
-               
-               </div>
             </div>
+           </div>
          </div>
       </section>
 
