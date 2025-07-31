@@ -116,7 +116,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-10 mx-auto">
-              <h2 class="section-title-tc">Interactive Demos</h2>
+              <h2 class="section-title-tc">Few-shot fine tuning and animation</h2>
               <p class="text-justify">
                 PRIMAL supports few-shot action personalization. Provided a few seconds of videos, we can fine-tune the base model with the mocapaded results. The motion realism and responsiveness are kepted, and the avatar motion style is personalized. In this demo, we retarget the generated motion to Unitree G1 character in Unreal.
               </p>
@@ -153,12 +153,32 @@
       </section>
 
 
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="section-title-tc"> Text-to-motion generation in real time </h2>
+              <p class="text-justify">
+                    PRIMAL also supports real-time text-to-motion generation. By finetuning the base model with <a href="https://babel.is.tue.mpg.de" target="_blank">BABEL</a>, we can control the avatar's actions given text prompts in the terminal. The following demo is running on Macbook Pro, and the frontend is based on Rust. Model's performance is better on more powerful machines.
+              </p>
+              <div class="row text-center">
+                <div class="col-md-12 text-center">
+                  <video autoplay loop muted playsinline width="100%">//////
+                    <source src="videos/t2m.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section id="local-videos">
          <div class="container">
             <div class="row">
                <div class="col-lg-10 mx-auto">
-                  <h2 class="section-title-tc">More insights on the 0.5-second motion segment.</h2>
+                  <h2 class="section-title-tc">Advantages of the 0.5-second atomic action</h2>
                   <p>
                       <b>The key novelty is the formulation that generates 0.5-second motion given a single initial state.</b> This contrasts with prior work that generates a long future motion conditioned on a past motion. Its benefits include reducing overfitting, making model training easier, and making the avatar reactive to impulses and classifier-based guidance.
                   </p>
