@@ -39,6 +39,9 @@
                      <a class="nav-link js-scroll-trigger" href="#about">About</a>
                   </li>
                   <li class="nav-item">
+                     <a class="nav-link js-scroll-trigger" href="#faq">FAQs</a>
+                  </li>
+                  <li class="nav-item">
                      <a class="nav-link js-scroll-trigger" href="#video">Video</a>
                   </li>
                   <li class="nav-item">
@@ -97,6 +100,58 @@
                   <p class="lead text-justify">
                      We formulate the motor system of an interactive avatar as a generative motion model that can drive the body to move through 3D space in a perpetual, realistic, controllable, and responsive manner. Although human motion generation has been extensively studied, many existing methods lack the responsiveness and realism of real human movements. Inspired by recent advances in foundation models, we propose PRIMAL, which is learned with a two-stage paradigm. In the pretraining stage, the model learns body movements from a large number of sub-second motion segments, providing a generative foundation from which more complex motions are built. This training is fully unsupervised without annotations. Given a single-frame initial state during inference, the pretrained model not only generates unbounded, realistic, and controllable motion, but also enables the avatar to be responsive to induced impulses in real time. In the adaptation phase, we employ a novel ControlNet-like adaptor to fine-tune the base model efficiently, adapting it to new tasks such as few-shot personalized action generation and spatial target reaching. Evaluations show that our proposed method outperforms state-of-the-art baselines. We leverage the model to create a real-time character animation system in Unreal Engine that feels highly responsive and natural.
                   </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="faq" class="bg-light">
+         <div class="container py-5">
+            <div class="row">
+               <div class="col-lg-10 mx-auto">
+                  <h2 class="section-title-tc text-center mb-4">FAQs</h2>
+                  <div class="mb-4">
+                     <h5>1. What is the key novelty of PRIMAL?</h5>
+                     <p class="text-justify">
+                        The key novelty is the formulation. Instead of using long sequences, our model only predicts the next half-second motion based on the initial frame, and runs recursively during inference. The neural network just uses standard transformer layers.
+                     </p>
+                  </div>
+                  <div class="mb-4">
+                     <h5>2. What are potential future works?</h5>
+                     <p class="text-justify">
+                        There are many. For example, PRIMAL does have face and hands. It is still too slow to be used for on-device computation in games. When working on robots, additional RL-based tracking in physical simulation would be necessary. 
+                     </p>
+                  </div>
+                  <div>
+                     <h5>3. How is the poking force applied to the body without physical simulation?</h5>
+                     <p class="text-justify">
+                        We don't use force. Instead, we just reset the velocities on the body joints for impulse induction, according to Ft=m(v2-v1) (impulse momentum theorem in physics). Since we dont know the mass m, we just manipulate the velocity for approximation.
+                     </p>
+                  </div>
+                  <div>
+                     <h5>4. How is unbounded motion generated during testing?</h5>
+                     <p class="text-justify">
+                        The diffusion model only generates 0.5-second motion based on one frame. Afterwards, we use the generated last frame as the new condition to produce the next half-second motion, and so on.
+                     </p>
+                  </div>
+                  <div>
+                     <h5>5. How does the model keep long-term stability during runtime?</h5>
+                     <p class="text-justify">
+                        Unlike previous works, we neither use scheduled sampling nor VQVAE-like discretization. Our motion representation is in a continuous space. After one-day training, the stability just emerges. See 5:28 at our youtube video.
+                     </p>
+                  </div>
+                  <div>
+                     <h5>6. Since the model supports classifier-based guidance, can the avatar avoid obstacles in a 3D environment?</h5>
+                     <p class="text-justify">
+                        Yes probably, in particular when we use some body SDF methods like VolumetricSMPL. But we did not try it in this work.
+                     </p>
+                  </div>
+                  <div>
+                     <h5>7. Does PRIMAL support more complex text-to-motion instructions, such as “move forward for 10 steps”?</h5>
+                     <p class="text-justify">
+                        No, PRIMAL does not use motion history and cannot remember how many steps it has taken. There are two ways to address this issue: 1. use the motion history and increase the context window. 2. use PRIMAL and another long-term memory mechanism. Note that PRIMAL can be fine-tuned with BABEL, so it can understand and generate some motions like "move forward".
+                     </p>
+                  </div>
                </div>
             </div>
          </div>
