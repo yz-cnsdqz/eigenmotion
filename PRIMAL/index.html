@@ -125,7 +125,7 @@
                   <div>
                      <h5>3. How is the poking force applied to the body without physical simulation?</h5>
                      <p class="text-justify">
-                        We don't use force. Instead, we just reset the velocities on the body joints for impulse induction, according to Ft=m(v2-v1) (impulse momentum theorem in physics). Since we dont know the mass m, we just manipulate the velocity for approximation.
+                        We don't use force. Instead, we reset the velocities on the body joints to induce impulses, according to Ft=m(v2-v1) (impulse-momentum theorem). The mass is assumed to be 1 here. Note that the velocity is part of the motion representation. Our diffusion model just generalizes to unseen velocities. 
                      </p>
                   </div>
                   <div>
