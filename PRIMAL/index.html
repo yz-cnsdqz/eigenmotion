@@ -152,6 +152,12 @@
                         No, PRIMAL does not use motion history and cannot remember how many steps it has taken. There are two ways to address this issue: 1. use the motion history and increase the context window. 2. use PRIMAL and another long-term memory mechanism. Note that PRIMAL can be fine-tuned with BABEL, so it can understand and generate some motions like "move forward".
                      </p>
                   </div>
+                  <div>
+                     <h5>8. Why doesn't PRIMAL have long-term memory?</h5>
+                     <p class="text-justify">
+                        The inference process of PRIMAL is Markovian. The previous and the current half-second motion segments are connected only through their overlapping frame. The long-term memory is often not considered part of the human motor system in cognitive science.
+                     </p>
+                  </div>
                </div>
             </div>
          </div>
